@@ -31,11 +31,11 @@ Start by importing the component.
 
 ```javascript
 import Vue from 'vue'
-import Vue3LangJs from 'vue3-lang-js'
+import Vue3Langjs from 'vue3-lang-js'
 // get the data source
 import translations from './vue-translations.js';
 
-Vue.use(Vue3Lang, {
+Vue.use(Vue3Langjs, {
     messages: translations, // Provide locale file
     locale: 'de', // Set locale
     fallback: 'en' // Set fallback lacale
