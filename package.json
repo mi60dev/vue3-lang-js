@@ -1,5 +1,5 @@
 {
-  "name": "vue3-lang-js",
+  "name": "vue3-langjs",
   "version": "1.0.0",
   "description": "Vue3 translations for Laravel",
   "main": "dist/index.js",
