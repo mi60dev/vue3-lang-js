@@ -1,4 +1,4 @@
-# vue3-lang-js
+# vue3-langjs
 
 ## Information
 
@@ -22,7 +22,7 @@ php artisan lang:js resources/js/vue-translations.js --no-lib --quiet
 
 ### Step 4: Install the package
 ```
-$ npm install mi60dev/vue3-lang-js
+$ npm install -S vue3-langjs
 ```
 
 ## Initialization
@@ -31,7 +31,7 @@ Start by importing the component.
 
 ```javascript
 import Vue from 'vue'
-import Vue3LangJs from 'mi60dev/vue3-lang-js'
+import Vue3LangJs from 'vue3-lang-js'
 // get the data source
 import translations from './vue-translations.js';
 
