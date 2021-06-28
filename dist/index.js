@@ -7,7 +7,6 @@ const plugin = {
     const Locale = options.locale || 'en';
     const fallbackLocale = options.fallback || 'en';
     const messages = options.messages || {};
-    console.log(Locale);
 
     const lang = new Lang({
       messages: messages,
