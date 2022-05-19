@@ -22,6 +22,10 @@ const plugin = {
 
     Object.defineProperty(Vue.config.globalProperties, '$trans', { get: () => translate})
     Object.defineProperty(Vue.config.globalProperties, '$t', { get: () => translate})
+    
+    if(options.hasOwnProperty('alias')) {
+        Object.defineProperty(Vue.config.globalProperties, options.alias, { get: () => translate})
+    }
   }
 };
 
