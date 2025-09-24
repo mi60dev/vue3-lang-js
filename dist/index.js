@@ -1,32 +1,38 @@
 import Lang from 'lang.js';
+import { ref } from 'vue';
 
 const plugin = {
   install(Vue, options) {
-    // Default options
-    
-    const Locale = options.locale || 'en';
+
+    const localeRef = ref(options.locale || 'en');
     const fallbackLocale = options.fallback || 'en';
     const messages = options.messages || {};
 
     const lang = new Lang({
       messages: messages,
-      locale: Locale,
+      locale: localeRef.value,
       fallback: fallbackLocale
     });
 
-    var translate = function (key, options) {
+    const translate = function (key, options) {
+      localeRef.value;
       return lang.trans(key, options);
     };
 
-    Object.defineProperty(Vue.config.globalProperties, '$lang', { get: () => lang})
+    lang._reactiveLocaleRef = localeRef;
+    const originalSetLocale = lang.setLocale.bind(lang);
+    lang.setLocale = function (newLocale) {
+      originalSetLocale(newLocale);
+      localeRef.value = newLocale;
+    };
 
-    Object.defineProperty(Vue.config.globalProperties, '$trans', { get: () => translate})
-    Object.defineProperty(Vue.config.globalProperties, '$t', { get: () => translate})
-    
+    Object.defineProperty(Vue.config.globalProperties, '$lang', { get: () => lang });
+    Object.defineProperty(Vue.config.globalProperties, '$trans', { get: () => translate });
+    Object.defineProperty(Vue.config.globalProperties, '$t', { get: () => translate });
+  
     if(options.hasOwnProperty('alias')) {
         Object.defineProperty(Vue.config.globalProperties, options.alias, { get: () => translate})
     }
   }
 };
-
 export default plugin;
