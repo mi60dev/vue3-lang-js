@@ -1,5 +1,9 @@
 # vue3-langjs
 
+
+## IMPORTANT: new releases was introduced on SEP 2025. If you experience any issues with the new 1.0.2-dev version, make sure to use the original 1.0.1. The new 1.0.2-dev version will be set to official after additional testing.
+
+
 ## Information
 
 This plugin was created in order to provide working Vue3 translations for a project of mine. It uses [mariuzzo/laravel-js-localization](https://github.com/rmariuzzo/Laravel-JS-Localization) & some code from [eli5-amsterdam/vue-lang-js](https://github.com/eli5-amsterdam/vue-lang-js). This package is by no means perfect, so any contribution is well appreciated.
