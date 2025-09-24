@@ -1,8 +1,8 @@
 # vue3-langjs
 
 
-## IMPORTANT: 
-#### New releases was introduced on SEP 2025. If you experience any issues with the master branch (aligned with 1.0.2-dev), make sure to use the original 1.0.1 release. The new 1.0.2-dev version will be set to official after additional testing.
+## IMPORTANT (SEP 2025)
+#### New releases was introduced. If you experience any issues with the master branch (aligned with 1.0.2-dev), make sure to use the original 1.0.1 release. The new 1.0.2-dev version will be set to official after additional testing.
 
 
 ## Information
